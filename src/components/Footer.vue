@@ -18,7 +18,7 @@
             </a>
             &horbar;
             <a
-                class="inline-block text-blue p-1 hover:underline focus:underline" href="https://github.com/et3rnity45" target="_blank" rel=" noopener noreferrer">
+                class="inline-block text-blue p-1 hover:underline focus:underline" href="https://github.com/et3rnity45/Countries-Wiki" target="_blank" rel=" noopener noreferrer">
                 Github
             </a>
         </div>
