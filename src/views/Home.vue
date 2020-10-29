@@ -6,8 +6,18 @@
             </svg>
             <label class="block text-4xl text-lightwhite font-medium m-8">Find a Country</label>
             <p class="text-xs text-red-500 text-left" v-if="notFound">Not a country name !</p>
-            <input class="bg-lightblack outline-none border-0 rounded w-full my-0 mx-auto p-4 text-lightblue text-3xl font-normal text-center"
-                type="text" v-model="countryName" placeholder="France" @focus="modal = true"/> 
+            <div class="relative inline-flex w-5/6">
+                <input 
+                    class="bg-lightblack outline-none border-0 rounded w-full my-0 mx-auto p-4 pr-24 text-lightblue text-3xl font-normal text-center"
+                    type="text" v-model="countryName" placeholder="France" @focus="modal = true"
+                /> 
+                <button class="absolute top-0 bottom-0 right-0 left-auto inline-flex w-20 justify-center items-center text-blue border-l-2 border-black" type="submit">
+                    <svg width="24" height="24" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <circle fill="none" stroke="currentColor" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
+                        <path fill="none" stroke="currentColor" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
+                    </svg>
+                </button>
+            </div>
             <div class="overflow-y-auto h-32">
                 <ul class="bg-lightblack text-white rounded-b border-t border-gray" v-if="countryName && modal">
                     <li class="py-2 cursor-pointer hover:bg-blue hover:bg-opacity-50" v-for="country in filteredCountries" :key="country.alpha3Code" @click="setCountryName(country.name)" >{{ country.name }}</li>
